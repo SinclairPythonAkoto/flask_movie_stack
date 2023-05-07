@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block title %}Movie Collection{% endblock %}
+
+{% block h1 %}Movie Collection{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('calculate_movies_array') }}" method="post">
+    <label for="n">Number of movies:</label>
+    <input type="number" name="n" id="n" required><br><br>
+
+    <label for="m">Number of movies to watch:</label>
+    <input type="number" name="m" id="m" required><br><br>
+
+    <label for="movies">Movies to watch:</label>
+    <input type="number" name="movies[]" id="movies" required><br>
+    <input type="number" name="movies[]" id="movies"><br>
+    <input type="number" name="movies[]" id="movies"><br>
+
+    <button type="submit">Calculate</button>
+</form>
+{% endblock %}
