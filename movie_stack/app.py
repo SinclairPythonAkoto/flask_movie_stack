@@ -16,5 +16,6 @@ def calculate_movies_array():
     return movies_array
 
 
+
 if '__main__' == __name__:
     app.run(debug=True)
